@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   createBrowserRouter,
 } from 'react-router-dom';
@@ -22,4 +21,6 @@ const routes: RouteObject[] = [
   },
 ];
 
-export const router = createBrowserRouter(routes);
+export const router = createBrowserRouter(routes, {
+  basename: '/my-portfolio',
+});
