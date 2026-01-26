@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
         <div className="font-mono text-sm uppercase tracking-[0.2em]">
           {/* Replace with your logo or initials */}
           <NavLink to="/" className="hover:opacity-80">
-            YourName
+            TONKA
           </NavLink>
         </div>
         <nav className="flex items-center gap-4 text-sm">
