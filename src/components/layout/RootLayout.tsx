@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
-import { Footer } from './Footer';
+//import { Footer } from './Footer';
 import { ThemedBackground } from '../theme/ThemedBackground';
 
 export const RootLayout: React.FC = () => {
@@ -12,7 +12,7 @@ export const RootLayout: React.FC = () => {
         <main className="flex-1">
           <Outlet />
         </main>
-        <Footer />
+        {/*<Footer />*/}
       </div>
     </ThemedBackground>
   );
