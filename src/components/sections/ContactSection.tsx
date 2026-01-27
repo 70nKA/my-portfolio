@@ -3,7 +3,7 @@ import { SectionHeading } from '../ui/SectionHeading';
 
 export const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="px-4 py-16">
+    <section id="contact" className="px-4 py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32 scroll-mt-24">
       <div className="relative mx-auto max-w-3xl lg:max-w-5xl">
         {/* Future: <ContactTraces /> as an absolutely positioned layer */}
 
