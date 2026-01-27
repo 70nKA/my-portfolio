@@ -34,3 +34,13 @@ export interface Skill {
   categoryId: string;
   icon?: string;
 }
+
+export type ExperienceItem = {
+  id: string;
+  role: string;
+  org: string;
+  location?: string;
+  period: string;
+  description: string;
+  highlights?: string[];
+};
