@@ -46,6 +46,18 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ entry, index }) => {
             {entry.summary}
           </p>
 
+          {/* Image (optional) */}
+          {entry.imageUrl && (
+            <div className="mt-3 overflow-hidden rounded-xl border border-schematic-grid/40 dark:border-pcb-dot/40">
+              <img
+                src={entry.imageUrl}
+                alt={entry.title}
+                className="h-48 w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          )}
+
           {entry.projectSlug && (
             <div className="mt-3">
               <Link
