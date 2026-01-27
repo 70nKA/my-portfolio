@@ -22,5 +22,5 @@ const routes: RouteObject[] = [
 ];
 
 export const router = createBrowserRouter(routes, {
-  basename: '/my-portfolio',
+  basename: '/my-portfolio/',
 });
