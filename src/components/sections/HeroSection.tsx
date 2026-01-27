@@ -39,7 +39,7 @@ export const HeroSection: React.FC = () => {
             {/* Placeholder avatar */}
             <div className="flex h-full w-full items-center justify-center text-sm text-schematic-muted dark:text-pcb-muted">
               <img
-                  src="/images/hero/hero_1.jpg"
+                  src="images/hero/hero_1.jpg"
                   alt="Your Photo"
                   className="h-full w-full object-cover"
                 />
