@@ -49,3 +49,39 @@
 .animate-fade-in-up {
   animation: fade-in-up 0.4s ease-out forwards;
 }
+
+/* ===== Scrollbar visibility control ===== */
+
+/* Default: hide scrollbar */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* WebKit-based browsers (Chrome, Edge, etc.) */
+html::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* When the user is actively scrolling, show a thin scrollbar */
+html.scrolling {
+  scrollbar-width: thin; /* Firefox: thin overlay scrollbar */
+}
+
+html.scrolling::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.scrolling::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html.scrolling::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.6); /* slate-400-ish */
+  border-radius: 999px;
+}
+
+html.scrolling::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.9);
+}
