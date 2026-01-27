@@ -50,38 +50,19 @@
   animation: fade-in-up 0.4s ease-out forwards;
 }
 
-/* ===== Scrollbar visibility control ===== */
+/* ===== Scrollbar: always hidden, layout stable ===== */
 
-/* Default: hide scrollbar */
+/* Hide scrollbar visuals */
 html {
-  scrollbar-width: none; /* Firefox */
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* Reserve gutter so layout doesn't shift when scrolling */
+  scrollbar-gutter: stable;
 }
 
-/* WebKit-based browsers (Chrome, Edge, etc.) */
+/* Chrome / Edge / Safari */
 html::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-}
-
-/* When the user is actively scrolling, show a thin scrollbar */
-html.scrolling {
-  scrollbar-width: thin; /* Firefox: thin overlay scrollbar */
-}
-
-html.scrolling::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-html.scrolling::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-html.scrolling::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.6); /* slate-400-ish */
-  border-radius: 999px;
-}
-
-html.scrolling::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.9);
+  width: 0;
+  height: 0;
 }

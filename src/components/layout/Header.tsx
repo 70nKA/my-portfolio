@@ -40,14 +40,13 @@ const navItems: NavItem[] = [
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  getSectionLink: (hash: string) => string;
+  isHome: boolean;
 }
 
 /**
  * Full-screen mobile menu rendered via portal to <body>.
- * This guarantees it covers everything, independent of layout/z-index.
  */
-function MobileMenuOverlay({ isOpen, onClose, getSectionLink }: MobileMenuProps) {
+function MobileMenuOverlay({ isOpen, onClose, isHome }: MobileMenuProps) {
   if (!isOpen) return null;
   const target = document.body;
 
@@ -73,13 +72,11 @@ function MobileMenuOverlay({ isOpen, onClose, getSectionLink }: MobileMenuProps)
         </button>
       </div>
 
-      {/* Centered nav items, scrollable if viewport is short */}
-            {/* Scrollable nav area below the top bar */}
       {/* Scrollable nav area below the top bar */}
       <div className="flex flex-1 overflow-y-auto px-6">
         <div
           className="mx-auto flex min-h-full w-full max-w-xs flex-col
-                    items-center justify-center gap-8 py-12"
+                     items-center justify-center gap-8 py-12"
         >
           {navItems.map((item) => {
             if (item.type === 'page') {
@@ -100,12 +97,31 @@ function MobileMenuOverlay({ isOpen, onClose, getSectionLink }: MobileMenuProps)
               );
             }
 
+            // Section item
+            const commonClasses =
+              'text-lg font-medium transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue';
+
+            if (isHome) {
+              // On home: use normal anchor -> browser scroll to section
+              return (
+                <a
+                  key={item.id}
+                  href={item.hash}
+                  onClick={onClose}
+                  className={commonClasses}
+                >
+                  {item.label}
+                </a>
+              );
+            }
+
+            // On other pages: just go to home top
             return (
               <Link
                 key={item.id}
-                to={getSectionLink(item.hash)}
+                to="/"
                 onClick={onClose}
-                className="text-lg font-medium transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue"
+                className={commonClasses}
               >
                 {item.label}
               </Link>
@@ -122,6 +138,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === '/';
 
   // Close mobile menu automatically when switching to desktop width
   useEffect(() => {
@@ -131,9 +148,7 @@ export function Header() {
       }
     };
 
-    // Run once on mount in case the app loads at a large width
     handleResize();
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -163,13 +178,6 @@ export function Header() {
       body.style.overflow = '';
     };
   }, [isMenuOpen]);
-
-  function getSectionLink(hash: string): string {
-    if (location.pathname === '/') {
-      return hash;
-    }
-    return `/${hash}`;
-  }
 
   return (
     <>
@@ -213,12 +221,24 @@ export function Header() {
                 );
               }
 
+              // Section item
+              const commonClasses =
+                'transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue';
+
+              if (isHome) {
+                return (
+                  <a
+                    key={item.id}
+                    href={item.hash}
+                    className={commonClasses}
+                  >
+                    {item.label}
+                  </a>
+                );
+              }
+
               return (
-                <Link
-                  key={item.id}
-                  to={getSectionLink(item.hash)}
-                  className="transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue"
-                >
+                <Link key={item.id} to="/" className={commonClasses}>
                   {item.label}
                 </Link>
               );
@@ -246,7 +266,7 @@ export function Header() {
       <MobileMenuOverlay
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
-        getSectionLink={getSectionLink}
+        isHome={isHome}
       />
     </>
   );
