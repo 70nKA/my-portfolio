@@ -26,15 +26,27 @@ export const ProjectDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="px-4 py-16">
-      <div className="mx-auto max-w-3xl">
+    <div className="px-4 py-16 sm:py-20 lg:py-24 xl:py-28 2xl:py-32">
+      <div className="mx-auto max-w-5xl">
         <SectionHeading eyebrow="Project" title={project.title} />
 
         <p className="mt-3 text-sm text-schematic-muted dark:text-pcb-muted">
           {project.shortDescription}
         </p>
 
-        {/* PCB-style layout emphasis in dark mode can be enhanced later */}
+        {/* Hero image */}
+        {project.heroImageUrl && (
+          <div className="mt-6 overflow-hidden rounded-xl border border-schematic-grid/70 bg-schematic-surface/60 dark:border-pcb-dot/70 dark:bg-pcb-surface/60">
+            <img
+              src={project.heroImageUrl}
+              alt={`${project.title} preview`}
+              className="h-auto w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        )}
+
+        {/* Main content card */}
         <div className="mt-8 space-y-6 rounded-xl border border-schematic-grid/60 bg-schematic-surface/80 p-6 shadow-sm backdrop-blur dark:border-pcb-dot/60 dark:bg-pcb-surface/80">
           {project.longDescription && (
             <p className="text-sm text-schematic-muted dark:text-pcb-muted">
@@ -55,6 +67,28 @@ export const ProjectDetailPage: React.FC = () => {
               ))}
             </div>
           </div>
+
+          {/* Gallery */}
+          {project.images && project.images.length > 0 && (
+            <div>
+              <h3 className="text-sm font-semibold">Screenshots</h3>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                {project.images.map((src, index) => (
+                  <div
+                    key={src}
+                    className="overflow-hidden rounded-lg border border-schematic-grid/40 bg-schematic-surface/60 dark:border-pcb-dot/40 dark:bg-pcb-surface/60"
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="h-auto w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="flex flex-wrap gap-3 text-sm">
             {project.liveUrl && (

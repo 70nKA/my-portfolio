@@ -7,6 +7,10 @@ import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ProjectDetailPage } from './pages/ProjectDetailPage';
 import { NotFoundPage } from './pages/NotFoundPage.tsx';
+import { ExperiencePage } from './pages/ExperiencePage';
+import { ExperienceDetailPage } from './pages/ExperienceDetailPage';
+import { EducationPage } from './pages/EducationPage';
+import { EducationDetailPage } from './pages/EducationDetailPage';
 
 const routes: RouteObject[] = [
   {
@@ -16,6 +20,10 @@ const routes: RouteObject[] = [
       { index: true, element: <HomePage /> },
       { path: 'projects', element: <ProjectsPage /> },
       { path: 'projects/:slug', element: <ProjectDetailPage /> },
+      { path: 'experience', element: <ExperiencePage /> },
+      { path: 'experience/:slug', element: <ExperienceDetailPage /> },
+      { path: 'education', element: <EducationPage /> },
+      { path: 'education/:slug', element: <EducationDetailPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },

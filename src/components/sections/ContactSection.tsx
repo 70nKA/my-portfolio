@@ -19,32 +19,32 @@ export const ContactSection: React.FC = () => {
             <div>
               <span className="font-medium">Email: </span>
               <a
-                href="mailto:you@example.com"
+                href="mailto:antonija.grbavac@outlook.com"
                 className="text-schematic-accent underline-offset-4 hover:underline dark:text-pcb-traceBlue"
               >
-                you@example.com
+                antonija.grbavac@outlook.com
               </a>
             </div>
             <div>
               <span className="font-medium">GitHub: </span>
               <a
-                href="https://github.com/your-handle"
+                href="https://github.com/70nKA"
                 target="_blank"
                 rel="noreferrer"
                 className="text-schematic-accent underline-offset-4 hover:underline dark:text-pcb-traceBlue"
               >
-                github.com/your-handle
+                github.com/70nKA
               </a>
             </div>
             <div>
               <span className="font-medium">LinkedIn: </span>
               <a
-                href="https://linkedin.com/in/your-handle"
+                href="https://linkedin.com/in/antonija-grbavac-370295244"
                 target="_blank"
                 rel="noreferrer"
                 className="text-schematic-accent underline-offset-4 hover:underline dark:text-pcb-traceBlue"
               >
-                linkedin.com/in/your-handle
+                linkedin.com/in/antonija-grbavac-370295244
               </a>
             </div>
           </div>
