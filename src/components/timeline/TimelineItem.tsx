@@ -1,3 +1,4 @@
+// src/components/timeline/TimelineItem.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import type { TimelineEntry } from '../../types/content';
@@ -13,6 +14,20 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ entry, index }) => {
   const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.4 });
   const isLeft = index % 2 === 0;
 
+  let detailPath: string | null = null;
+  let detailLabel = '';
+
+  if (entry.projectSlug) {
+    detailPath = `/projects/${entry.projectSlug}`;
+    detailLabel = 'View project';
+  } else if (entry.experienceSlug) {
+    detailPath = `/experience/${entry.experienceSlug}`;
+    detailLabel = 'View experience';
+  } else if (entry.educationSlug) {
+    detailPath = `/education/${entry.educationSlug}`;
+    detailLabel = 'View education';
+  }
+
   return (
     <div
       ref={ref}
@@ -21,23 +36,15 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ entry, index }) => {
         ${isLeft ? 'flex-row' : 'flex-row-reverse'}
       `}
     >
-      {/* Vertical line / traces */}
-      <div className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-schematic-grid dark:bg-pcb-dot md:block">
-        {/* Extension: multi-line red/blue traces, animated glow near viewport center */}
-      </div>
-
-      {/* Spacer for alignment on small screens */}
+      {/* line etc. */}
       <div className="hidden flex-1 md:block" />
 
-      {/* Card */}
       <div
         className={`flex-1 ${
           inView ? 'animate-fade-in-up' : 'opacity-50'
         } transition-transform`}
       >
-        <Card
-          className="relative border-schematic-grid/70 bg-schematic-surface/80 dark:border-pcb-dot/70 dark:bg-pcb-surface/80"
-        >
+        <Card className="relative border-schematic-grid/70 bg-schematic-surface/80 dark:border-pcb-dot/70 dark:bg-pcb-surface/80">
           <p className="mb-1 text-xs uppercase tracking-[0.2em] text-schematic-muted dark:text-pcb-muted">
             {entry.date}
           </p>
@@ -46,7 +53,6 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ entry, index }) => {
             {entry.summary}
           </p>
 
-          {/* Image (optional) */}
           {entry.imageUrl && (
             <div className="mt-3 overflow-hidden rounded-xl border border-schematic-grid/40 dark:border-pcb-dot/40">
               <img
@@ -58,18 +64,17 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ entry, index }) => {
             </div>
           )}
 
-          {entry.projectSlug && (
+          {detailPath && (
             <div className="mt-3">
               <Link
-                to={`/projects/${entry.projectSlug}`}
+                to={detailPath}
                 className="text-xs font-medium text-schematic-accent underline-offset-4 hover:underline dark:text-pcb-traceBlue"
               >
-                View project
+                {detailLabel}
               </Link>
             </div>
           )}
 
-          {/* Optional: underlined trace when in view */}
           <div className="mt-3 h-0.5 bg-gradient-to-r from-pcb-traceRed via-pcb-traceBlue to-pcb-traceRed opacity-0 transition-opacity dark:opacity-100" />
         </Card>
       </div>

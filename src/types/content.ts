@@ -19,7 +19,12 @@ export interface TimelineEntry {
   summary: string;
   description?: string;
   imageUrl?: string;
-  projectSlug?: string | null; // link to Project if exists, else null
+
+  // Optional links
+  projectSlug?: string | null;    // /projects/:slug
+  experienceSlug?: string | null; // /experience/:slug
+  educationSlug?: string | null;  // /education/:slug
+
   tags?: string[];
 }
 
@@ -38,6 +43,7 @@ export interface Skill {
 
 export type ExperienceItem = {
   id: string;
+  slug: string;
   role: string;
   org: string;
   location?: string;
@@ -48,6 +54,7 @@ export type ExperienceItem = {
 
 export type EducationItem = {
   id: string;
+  slug: string; 
   degree: string;      // e.g. "B.Sc. Computer Science"
   field?: string;      // optional, if you want a separate field
   school: string;

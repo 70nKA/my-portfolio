@@ -3,6 +3,7 @@ import type { EducationItem } from '../types/content';
 export const education: EducationItem[] = [
   {
     id: 'bsc-compsci',
+    slug: 'bsc-compsci',
     degree: 'B.Sc. Computer Science',
     field: 'Computer Science',
     school: 'Example University',
@@ -17,6 +18,7 @@ export const education: EducationItem[] = [
   },
   {
     id: 'hs-electronics',
+    slug: 'hs-electronics',
     degree: 'High School',
     field: 'Electronics / Technical Program',
     school: 'Technical High School',

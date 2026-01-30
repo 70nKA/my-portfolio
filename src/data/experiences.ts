@@ -3,6 +3,7 @@ import type { ExperienceItem } from '../types/content';
 export const experiences: ExperienceItem[] = [
   {
     id: 'frontend-architect',
+    slug: 'frontend-architect',
     role: 'Frontend Architect',
     org: 'Example Company',
     location: 'Remote',
@@ -16,6 +17,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 'association',
+    slug: 'association',
     role: 'Board Member',
     org: 'Electronics & Maker Association',
     location: 'City, Country',

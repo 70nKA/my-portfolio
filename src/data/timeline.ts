@@ -35,7 +35,7 @@ export const timeline: TimelineEntry[] = [
     description:
       'Began industry work on embedded Linux-based radio systems, contributing to synchronization drivers, automated testing, and CI workflows.',
     imageUrl: 'images/journey/Ericsson.jpg',
-    projectSlug: 'radio-sync-drivers',
+    experienceSlug: 'radio-sync-drivers',
     tags: ['Industry', 'Embedded C', 'Radio'],
   },
   {
