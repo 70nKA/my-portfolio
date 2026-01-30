@@ -9,7 +9,7 @@ function cn(...classes: Array<string | false | null | undefined>): string {
   return classes.filter(Boolean).join(' ');
 }
 
-type PageNavItemId = 'home' | 'projects' | 'experience';
+type PageNavItemId = 'home' | 'projects' | 'experience' | 'education';
 type SectionNavItemId = 'about' | 'journey' | 'skills' | 'contact';
 
 type PageNavItem = {
@@ -35,6 +35,7 @@ const navItems: NavItem[] = [
   { id: 'skills', label: 'Skills', type: 'section', hash: '#skills' },
   { id: 'contact', label: 'Contact', type: 'section', hash: '#contact' },
   { id: 'experience', label: 'Experience', type: 'page', to: '/experience' },
+  { id: 'education', label: 'Education', type: 'page', to: '/education' },
   { id: 'projects', label: 'Projects', type: 'page', to: '/projects' },
 ];
 

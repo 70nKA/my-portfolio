@@ -8,6 +8,7 @@ import { ProjectsPage } from './pages/ProjectsPage';
 import { ProjectDetailPage } from './pages/ProjectDetailPage';
 import { NotFoundPage } from './pages/NotFoundPage.tsx';
 import { ExperiencePage } from './pages/ExperiencePage';
+import { EducationPage } from './pages/EducationPage';
 
 const routes: RouteObject[] = [
   {
@@ -18,6 +19,7 @@ const routes: RouteObject[] = [
       { path: 'projects', element: <ProjectsPage /> },
       { path: 'projects/:slug', element: <ProjectDetailPage /> },
       { path: 'experience', element: <ExperiencePage /> },
+      { path: 'education', element: <EducationPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
