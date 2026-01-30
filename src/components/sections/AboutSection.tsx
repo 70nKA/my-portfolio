@@ -9,19 +9,19 @@ export const AboutSection: React.FC = () => {
         <SectionHeading eyebrow="About" title="About Me" />
 
         <p className="mt-3 text-sm text-schematic-muted dark:text-pcb-muted">
-          I’m an electronics and hardware design engineer from Split, Croatia. My work is centered on designing reliable boards and power systems, then validating them in the lab.
+          I’m an embedded hardware and software engineer from Split, Croatia. My work is centered on designing reliable PCBs and power systems, then bringing them to life on the bench and in the field.
         </p>
 
         <p className="mt-2 text-sm text-schematic-muted dark:text-pcb-muted">
-          With FESB Team Racing I led the development of the Battery Management System (BMS) master PCB for a Formula Student electric race car — handling schematic design, component selection, PCB layout in Altium, and hardware bring‑up on the bench. I’ve also designed relay and power‑distribution boards and mechanical enclosures for low‑voltage battery packs.
+          With FESB Team Racing I led the development of the Battery Management System (BMS) master PCB for a Formula Student electric race car — handling schematic design, component selection, PCB layout in Altium, and hardware bring‑up. I’ve also designed relay and power‑distribution boards and mechanical enclosures for low‑voltage battery packs, work that now continues as part of my master’s thesis.
         </p>
 
         <p className="mt-2 text-sm text-schematic-muted dark:text-pcb-muted">
-          My background includes years of hands‑on electrical installation work, which helps me think about real‑world constraints: wiring, safety, grounding, and how hardware is actually built and maintained.
+          Industry experience at Ericsson Nikola Tesla exposed me to production‑grade radio hardware, low‑level drivers, and automated testing. Years of residential electrical installations and current work as an optical technician (FTTH) keep me close to how cables, terminations, and enclosures behave in actual buildings and customer homes.
         </p>
 
         <p className="mt-2 text-sm text-schematic-muted dark:text-pcb-muted">
-          I enjoy projects where I can own the full hardware path: from first schematic and layout, through prototyping and measurement, to a stable, manufacturable design. If you need someone to design, debug, and validate electronic hardware, that’s where I’m at my best.
+          I enjoy projects where I can own the full hardware path: from first schematic and layout, through prototyping, measurement, and debugging, to a stable, manufacturable design that is safe to install and maintain. If you need someone to design, debug, and validate electronic hardware end‑to‑end, that’s where I’m at my best.
         </p>
       </div>
     </section>

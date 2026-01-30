@@ -59,30 +59,30 @@ Also handled installation of cabling, sockets, switches, and fixtures according 
       '/my-portfolio/images/projects/smart-lighting-system/lv_2_hw_pcb.jpg'],
   },
   {
-    slug: 'analog-digital-projects',
-    title: 'Analog & Digital Design Projects',
+    slug: 'DAC-breadboard',
+    title: 'Binary Weighted Resistor DAC design implementation',
     shortDescription:
-      'Selection of university projects: R-2R DAC and digital logic conversion board.',
+      'Simple design and implementation of a binary weighted resistor DAC.',
     longDescription:
-      'Built a 4-bit R-2R DAC with an op-amp buffer as an introduction to basic data conversion and analog signal conditioning. \
-Designed a digital logic conversion board to adapt a motorbike brake light actuation mechanism, focusing on signal levels, \
-noise immunity, and robust wiring in an automotive environment.',
-    techStack: ['R-2R DAC', 'Op-Amps', 'Digital Logic', 'Prototyping', 'Testing'],
-    liveUrl: '#',
-    repoUrl: '#',
+      'Binary weighted resistor DAC with 12V positive and negative power rails to support different types of analog output signals. \
+The DAC has an inverting oputput so for testing purposes another op-amp stage is used to obtain non-inverted voltage lowered output signal so that the ouput can be connected to Arduino analog input. \
+Arduino is used to provide digital input signals (binary values for a ramp signal) and read back the analog output voltage on Aroudino IDE monitor which in this case was used as an osilloscope for validation. \
+Later on I aquired an oscilloscope to properly validate the design and its performance which can be seen in the provided demo.',
+    techStack: ['Hardware', 'Analog Design', 'Op-Amps', 'DAC', 'Prototyping', 'Testing'],
+    liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQCPj2EJMRttS5rTK2t3YpUHAVer01OdeCdE_zX-7M_8Hyw?e=6EAYQ4',
   },
-  {
-    slug: 'radio-sync-drivers',
-    title: 'Radio Synchronization Drivers (Ericsson Nikola Tesla)',
-    shortDescription:
-      'Low-level synchronization drivers for next-generation radio hardware.',
-    longDescription:
-      'Contributed to the development and maintenance of synchronization drivers in Embedded C for new radio platforms. \
-Worked on configuration flows, timing behavior, and regression testing in embedded Linux environments. \
-Used automated test frameworks, scripting, and CI (Jenkins, Gerrit, Git) to ensure reliability and performance. \
-Code is proprietary, so only an overview is provided here.',
-    techStack: ['Embedded C', 'Embedded Linux', 'Radio Hardware', 'Synchronization', 'Python', 'Bash', 'Jenkins', 'Git', 'Gerrit'],
-    liveUrl: '#',
-    repoUrl: '#', // proprietary
-  },
+//   {
+//     slug: 'radio-sync-drivers',
+//     title: 'Radio Synchronization Drivers (Ericsson Nikola Tesla)',
+//     shortDescription:
+//       'Low-level synchronization drivers for next-generation radio hardware.',
+//     longDescription:
+//       'Contributed to the development and maintenance of synchronization drivers in Embedded C for new radio platforms. \
+// Worked on configuration flows, timing behavior, and regression testing in embedded Linux environments. \
+// Used automated test frameworks, scripting, and CI (Jenkins, Gerrit, Git) to ensure reliability and performance. \
+// Code is proprietary, so only an overview is provided here.',
+//     techStack: ['Embedded C', 'Embedded Linux', 'Radio Hardware', 'Synchronization', 'Python', 'Bash', 'Jenkins', 'Git', 'Gerrit'],
+//     liveUrl: '#',
+//     repoUrl: '#', // proprietary
+//   },
 ];

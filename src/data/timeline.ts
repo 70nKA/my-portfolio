@@ -50,6 +50,17 @@ export const timeline: TimelineEntry[] = [
     tags: ['Formula Student', 'Hardware', 'BMS'],
   },
   {
+    id: '2021-DAC',
+    title: 'Binary Weighted Resistor DAC design implementation',
+    date: '2021',
+    summary:
+      'Designed and built a binary weighted resistor DAC with an op-amp invert.',
+    description:
+      'The design included positive and negative power supplies to support diffrent types of analog output signals.',
+    projectSlug: 'DAC-breadboard',
+    tags: ['Hardware', 'Analog Design', 'Op-Amps', 'DAC'],
+  },
+  {
     id: '2018-smart-lighting',
     title: 'Smart Lighting System & Interface PCB',
     date: '2018',
