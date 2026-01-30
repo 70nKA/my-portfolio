@@ -2,8 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Card } from '../ui/Card';
+import { experiences } from '../../data/experiences';
+import type { ExperienceItem } from '../../types/content';
 
 export const ExperienceSection: React.FC = () => {
+  // Take the first 2 experiences as a teaser
+  const preview: ExperienceItem[] = experiences.slice(0, 4);
+
   return (
     <section
       id="experience"
@@ -17,20 +22,24 @@ export const ExperienceSection: React.FC = () => {
           the dedicated experience page.
         </p>
 
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <Card className="border-schematic-grid/70 bg-schematic-surface/80 dark:border-pcb-dot/70 dark:bg-pcb-surface/80">
-            <h3 className="text-base font-semibold">Frontend Architect</h3>
-            <p className="mt-1 text-sm text-schematic-muted dark:text-pcb-muted">
-              Leading React architecture and design systems for complex interfaces.
-            </p>
-          </Card>
-
-          <Card className="border-schematic-grid/70 bg-schematic-surface/80 dark:border-pcb-dot/70 dark:bg-pcb-surface/80">
-            <h3 className="text-base font-semibold">Electronics Association</h3>
-            <p className="mt-1 text-sm text-schematic-muted dark:text-pcb-muted">
-              Running workshops around PCB design, embedded systems, and visual tooling.
-            </p>
-          </Card>
+        <div className="mt-6 grid gap-4 md:grid-cols-1">
+          {preview.map((exp) => (
+            <Card
+              key={exp.id}
+              className="border-schematic-grid/70 bg-schematic-surface/80 dark:border-pcb-dot/70 dark:bg-pcb-surface/80"
+            >
+              <h3 className="text-base font-semibold">{exp.role}</h3>
+              <p className="text-sm font-medium text-schematic-muted dark:text-pcb-muted">
+                {exp.org}
+              </p>
+              <p className="mt-1 text-xs text-schematic-muted dark:text-pcb-muted">
+                {exp.period}
+              </p>
+              <p className="mt-2 text-sm text-schematic-muted dark:text-pcb-muted">
+                {exp.description}
+              </p>
+            </Card>
+          ))}
         </div>
 
         <div className="mt-6">
