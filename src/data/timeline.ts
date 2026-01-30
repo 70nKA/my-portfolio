@@ -34,7 +34,6 @@ export const timeline: TimelineEntry[] = [
       'Started working on low-level synchronization drivers for new radio hardware platforms.',
     description:
       'Began industry work on embedded Linux-based radio systems, contributing to synchronization drivers, automated testing, and CI workflows.',
-    imageUrl: 'images/journey/Ericsson.jpg',
     experienceSlug: 'radio-sync-drivers',
     tags: ['Industry', 'Embedded C', 'Radio'],
   },
@@ -46,7 +45,7 @@ export const timeline: TimelineEntry[] = [
       'Became hardware design engineer for the electric Formula Student race car.',
     description:
       'Worked on BMS, relay boards, and low-voltage battery hardware, including PCB design, debugging, and mechanical integration.',
-    imageUrl: 'images/journey/FESB_team_racing.jpg',
+    imageUrl: 'images/journey/FESB_Racing.jpeg',
     projectSlug: 'bms-master-pcb',
     tags: ['Formula Student', 'Hardware', 'BMS'],
   },
@@ -58,7 +57,7 @@ export const timeline: TimelineEntry[] = [
       'Designed a smart lighting system with a custom PCB and 230 V installation.',
     description:
       'Combined household wiring with a low-voltage control PCB using relays and optocouplers, laying the foundation for later hardware design work.',
-    imageUrl: 'images/journey/Smart_lighting.jpg',
+    imageUrl: 'images/journey/installation.png',
     projectSlug: 'smart-lighting-system',
     tags: ['Early Project', 'Electrical Installation', 'PCB'],
   },
