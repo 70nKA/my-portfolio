@@ -25,6 +25,8 @@ and dedicated test firmware for communication buses and sensor interfaces (CAN, 
     ],
     liveUrl: '#',
     repoUrl: '#', // private / team-owned
+    heroImageUrl: '/my-portfolio/images/journey/BMS_master.jpg',
+    images: ['/my-portfolio/images/journey/BMS_master.jpg', '/my-portfolio/images/journey/BMS_master.jpg'],
   },
   {
     slug: 'ethernet-tx-driver',

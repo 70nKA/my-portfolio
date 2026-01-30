@@ -2,28 +2,97 @@ import type { ExperienceItem } from '../types/content';
 
 export const experiences: ExperienceItem[] = [
   {
-    id: 'frontend-architect',
-    slug: 'frontend-architect',
-    role: 'Frontend Architect',
-    org: 'Example Company',
-    location: 'Remote',
-    period: '2023 – Present',
+    id: 'optical-technician',
+    slug: 'optical-technician',
+    role: 'Optical Technician (Field Assistant)',
+    org: 'Telecommunications – Optical Access Installations',
+    location: 'Croatia',
+    period: 'Jan 2025 – Present',
     description:
-      'Leading the design and implementation of complex React frontends with a focus on performance, DX, and design systems.',
+      'Assisting with last‑mile optical fiber installations from the distribution point to end‑customer premises.',
     highlights: [
-      'Introduced a component library aligned with design tokens and theming (light schematic / dark PCB).',
-      'Reduced bundle size and improved perceived performance on key flows.',
+      'Perform fiber splicing, connector preparation, and optical cable management for FTTH connections.',
+      'Route transparent indoor fiber through customer homes, including drilling, fixing hooks, and planning discreet cable paths.',
+      'Handle outdoor distribution cabling (black 4‑wire cable) from the last distribution point to the building or house entry.',
+      'Work directly in customers’ homes, managing expectations and communication professionally in sometimes stressful situations.',
+      'Support setup and teardown on site, ensuring clean, safe, and well-documented installations.',
     ],
   },
   {
-    id: 'association',
-    slug: 'association',
-    role: 'Board Member',
-    org: 'Electronics & Maker Association',
-    location: 'City, Country',
-    period: '2021 – 2023',
+    id: 'hardware-fesb-team-racing',
+    slug: 'hardware-fesb-team-racing',
+    role: 'Hardware Design Engineer',
+    org: 'FESB Team Racing (Formula Student)',
+    location: 'Split, Croatia',
+    period: 'Dec 2022 – Present',
     description:
-      'Organized workshops and meetups around PCB design, embedded systems, and frontend visualizations for hardware projects.',
+      'Designing and validating electronic hardware for a Formula Student electric race car, with a focus on BMS and low-voltage systems.',
+    highlights: [
+      'Led schematic design and PCB layout of a custom BMS master board in Altium Designer.',
+      'Performed board bring-up and debugging, resolving routing issues, component mistakes, and analog stability problems.',
+      'Designed the first relay board version and contributed to debugging and validation of later revisions.',
+      'Designed the mechanical enclosure and carrier for the low-voltage battery pack in SolidWorks, ensuring robust mounting and integration.',
+    ],
   },
-  // Add more…
+  {
+    id: 'embedded-ericsson',
+    slug: 'embedded-ericsson',
+    role: 'Embedded Software Engineer',
+    org: 'Ericsson Nikola Tesla',
+    location: 'Split, Croatia',
+    period: 'Dec 2022 – Mar 2025',
+    description:
+      'Worked on low-level synchronization drivers and embedded software for next-generation radio hardware in an embedded Linux environment.',
+    highlights: [
+      'Developed and maintained synchronization drivers in Embedded C, improving radio reliability and timing performance.',
+      'Planned and implemented tasks for the first 10 MHz feature on Kryton-based radios, coordinating requirements and verification.',
+      'Created Bash and Python scripts to automate hardware validation and configuration file conversion.',
+      'Used Jenkins, internal test frameworks, Git, and Gerrit in a large Agile/SCRUM team for continuous integration and regression testing.',
+    ],
+  },
+  {
+    id: 'electrical-tech-installations',
+    slug: 'electrical-tech-installations',
+    role: 'Electrical Technician',
+    org: 'Residential Electrical Installations (Freelance)',
+    location: 'Various Locations, Croatia',
+    period: '2018 – Present',
+    description:
+      'Performed residential electrical installations and small-scale projects, from rough-in wiring to final fixtures and safety checks.',
+    highlights: [
+      'Completed full-house and apartment installations: cable routing, mounting sockets and switches, and installing lighting fixtures.',
+      'Designed and wired fuse boxes and power distribution for entire apartments, adhering to safety standards.',
+      'Responsible for ordering supplies and materials, planning cable and protection needs, and tracking tool usage and amortization.',
+    ],
+  },
+  {
+    id: 'conference-support-softcom-splitech',
+    slug: 'conference-support-softcom-splitech',
+    role: 'Conference Technical Support & Organizer',
+    org: 'SoftCOM & Splitech Conferences',
+    location: 'Split, Croatia',
+    period: '2020 – 2024',
+    description:
+      'Part of the organizing and technical support teams for international scientific conferences.',
+    highlights: [
+      'Provided technical support during sessions and meetings, assisting chairs and presenters with A/V and logistics.',
+      'For Splitech, managed session time-slot distribution and coordinated collection of scientific paper documentation.',
+      'Helped with on-site setup, room preparation, and post-conference teardown (“clean up”) for both conferences.',
+    ],
+  },
+  {
+    id: 'cafe-bar-lido',
+    slug: 'cafe-bar-lido',
+    role: 'Waitress & Bartender',
+    org: 'Cafe Bar Lido',
+    location: 'Stobreč, Croatia',
+    period: '2018 – 2025',
+    description:
+      'Worked as a waitress and bartender in a busy seaside café, often managing the bar and floor alone.',
+    highlights: [
+      'Prepared drinks, served guests, and handled payments while maintaining a welcoming atmosphere.',
+      'Created and managed order lists for supplies, ensuring the bar was stocked during peak periods.',
+      'Developed strong multitasking, communication, and customer-facing skills under time pressure.',
+    ],
+  },
 ];
