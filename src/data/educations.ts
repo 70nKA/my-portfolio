@@ -2,29 +2,46 @@ import type { EducationItem } from '../types/content';
 
 export const education: EducationItem[] = [
   {
-    id: 'bsc-compsci',
-    slug: 'bsc-compsci',
-    degree: 'B.Sc. Computer Science',
-    field: 'Computer Science',
-    school: 'Example University',
-    location: 'City, Country',
-    period: '2017 – 2020',
+    id: 'msc-electronics-compsys',
+    slug: 'msc-electronics-compsys',
+    degree: 'Master of Electronics and Computer Engineering (in progress)',
+    field: 'Electronics and Computer Engineering',
+    school: 'FESB – University of Split',
+    location: 'Split, Croatia',
+    period: '2023 – Present',
     description:
-      'Focused on software engineering, algorithms, and human–computer interaction with a strong interest in frontend architecture.',
+      'Graduate studies focused on embedded systems, digital and analog electronics, and computer engineering, with strong emphasis on hardware design and low-level development.',
     highlights: [
-      'Graduated with honors.',
-      'Capstone project on interactive visualization of hardware systems.',
+      'Master thesis: design and validation of a BMS master PCB for a Formula Student electric race car.',
+      'Coursework in embedded systems, digital design, and power electronics.',
     ],
   },
   {
-    id: 'hs-electronics',
-    slug: 'hs-electronics',
-    degree: 'High School',
-    field: 'Electronics / Technical Program',
-    school: 'Technical High School',
-    location: 'City, Country',
-    period: '2013 – 2017',
+    id: 'bsc-electrical-it',
+    slug: 'bsc-electrical-it',
+    degree: 'B.Sc. Electrical Engineering and Information Technology',
+    field: 'Electrical Engineering and IT',
+    school: 'FESB – University of Split',
+    location: 'Split, Croatia',
+    period: '2019 – 2023',
     description:
-      'Built a foundation in electronics, PCB design, and embedded systems that heavily influences my UI work.',
+      'Built a strong foundation in electronics, embedded systems, communication interfaces, and computer engineering.',
+    highlights: [
+      'Bachelor thesis: implemented an Ethernet TX driver on a PIC32MZ EF using bare-metal C, DMA, and RMII.',
+    ],
+  },
+  {
+    id: 'electrical-technician',
+    slug: 'electrical-technician',
+    degree: 'Electrical Technician (Vocational Secondary School)',
+    field: 'Electrical Installations and Maintenance',
+    school: 'Vocational Secondary School – Electrical Technician Program',
+    location: 'Croatia',
+    period: 'Completed 2018',
+    description:
+      'Vocational training focused on residential electrical installations, cabling, and safety regulations.',
+    highlights: [
+      'Hands-on experience with fuse-box wiring, socket and light fixture installation, and safe 230 V practices.',
+    ],
   },
 ];
