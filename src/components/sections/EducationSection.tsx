@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Card } from '../ui/Card';
 import { education } from '../../data/educations';
 
 export const EducationSection: React.FC = () => {
   // Show only the first 1–2 items as a teaser
-  const preview = education.slice(0, 2);
+  const preview = education;
 
   return (
     <section
@@ -21,7 +21,7 @@ export const EducationSection: React.FC = () => {
           frontend engineering and electronics-inspired interfaces.
         </p>
 
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="mt-6 grid gap-4 md:grid-cols-1">
           {preview.map((ed) => (
             <Card
               key={ed.id}
@@ -41,14 +41,14 @@ export const EducationSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-6">
+        {/* <div className="mt-6">
           <Link
             to="/education"
             className="text-sm font-medium text-schematic-accent underline-offset-4 hover:underline dark:text-pcb-traceBlue"
           >
             View full education
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
