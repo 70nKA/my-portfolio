@@ -31,5 +31,7 @@ export const skills: Skill[] = [
   { id: 'gerrit', name: 'Gerrit / Code Review', level: 82, categoryId: 'tools' },
   { id: 'jenkins', name: 'Jenkins / CI', level: 60, categoryId: 'tools' },
   { id: 'solidworks', name: 'SolidWorks', level: 40, categoryId: 'tools' },
+  { id: 'autoCAD', name: 'AutoCAD', level: 50, categoryId: 'tools' },
+  { id: 'catia', name: 'CATIA', level: 30, categoryId: 'tools' },
   { id: 'lab-equipment', name: 'Oscilloscope & Lab Equipment', level: 70, categoryId: 'tools' },
 ];
