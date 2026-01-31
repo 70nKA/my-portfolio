@@ -12,7 +12,7 @@ export const timeline: TimelineEntry[] = [
       'Completed the design and validation of a custom BMS master PCB in Altium, handling power paths, safety circuitry, and data collection from distributed slave boards.',
     imageUrl: 'images/journey/BMS_master.jpg',
     projectSlug: 'bms-master-pcb',
-    tags: ['Hardware', 'PCB Design', 'Altium', 'BMS'],
+    tags: ['Hardware', 'PCB Design', 'Altium', 'BMS', 'Formula Student'],
   },
   {
     id: '2026-pcb-portfolio',
@@ -24,6 +24,18 @@ export const timeline: TimelineEntry[] = [
       'Implemented a fully responsive layout, mobile navigation with portals, dark/light theming, and reusable UI primitives. The site itself is a project and a living playground for frontend architecture ideas.',
     projectSlug: 'pcb-inspired-portfolio',
     tags: ['Portfolio', 'React', 'Tailwind CSS'],
+  },
+  {
+    id: '2025-lv-battery-carrier',
+    title: 'LV Battery Carrier & Enclosure (Formula Student)',
+    date: '2025',
+    summary:
+      'Designed the low-voltage battery carrier and enclosure in SolidWorks.',
+    description:
+      'Created a robust mechanical carrier and enclosure for the Formula Student EV low-voltage battery pack, ensuring secure mounting, serviceability, and safe cable routing.',
+    imageUrl: '/my-portfolio/images/journey/LV_battery_carrier_single.png',
+    projectSlug: 'lv-battery-carrier',
+    tags: ['Mechanical', 'SolidWorks', 'Formula Student'],
   },
   {
     id: '2023-bachelors-thesis-ethernet',
@@ -45,6 +57,7 @@ export const timeline: TimelineEntry[] = [
       'Started working on low-level C/C++ firmware and sync drivers for radio hardware.',
     description:
       'Joined Ericsson Nikola Tesla in Split as an Embedded Software Engineer, contributing to synchronization drivers, test automation, and bring-up of new radio platforms.',
+    experienceSlug: 'embedded-ericsson',
     tags: ['Industry', 'Embedded', 'C/C++'],
   },
   {
