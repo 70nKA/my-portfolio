@@ -27,6 +27,32 @@ and dedicated test firmware for communication buses and sensor interfaces (CAN, 
     heroImageUrl: '/my-portfolio/images/journey/BMS_master.jpg',
   },
   {
+    slug: 'pcb-inspired-portfolio',
+    title: 'PCB-Inspired Portfolio',
+    shortDescription:
+      'This portfolio site themed after schematic and PCB editors, built with React, TypeScript, and Tailwind CSS.',
+    longDescription:
+      'A personal portfolio that combines frontend architecture best practices with a visual language inspired by schematics and PCB layout tools. It features a responsive layout, dark/light theming, smooth section navigation, and reusable UI primitives for cards, headings, and timeline entries.',
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    repoUrl: 'https://github.com/your-username/pcb-inspired-portfolio', // change to your repo
+  },
+  {
+    slug: 'lv-battery-carrier',
+    title: 'LV Battery Carrier & Enclosure (Formula Student)',
+    shortDescription:
+      'Mechanical design of the low-voltage battery carrier and enclosure for a Formula Student EV.',
+    longDescription:
+      'Designed the mechanical carrier and enclosure for the low-voltage battery pack of a Formula Student electric race car using SolidWorks. \
+Focused on robust mounting, ease of service, proper ventilation, and safe routing of power and signal cables. \
+Coordinated mechanical constraints with electrical requirements (clearances, connector access, and protection of wiring and terminals).',
+    techStack: ['SolidWorks', 'Mechanical Design', 'Battery Packaging', 'Formula Student'],
+    heroImageUrl: '/my-portfolio/images/journey/LV_battery_carrier_single.png',
+    images: [
+      '/my-portfolio/images/projects/lv-battery-carrier/LV_battery_carrier_battery.png',
+      '/my-portfolio/images/projects/lv-battery-carrier/LV_battery_carrier_formula.png',
+    ],
+  },
+  {
     slug: 'ethernet-tx-driver',
     title: "Bachelor's Thesis: Bare-Metal Ethernet TX Driver (PIC32MZ)",
     shortDescription:

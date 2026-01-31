@@ -37,18 +37,21 @@ export const experiences: ExperienceItem[] = [
   {
     id: 'embedded-ericsson',
     slug: 'embedded-ericsson',
-    role: 'Embedded Software Engineer',
+    role: 'Embedded Software Engineer (C/C++)',
     org: 'Ericsson Nikola Tesla',
     location: 'Split, Croatia',
     period: 'Dec 2022 – Mar 2025',
     description:
-      'Worked on low-level synchronization drivers and embedded software for next-generation radio hardware in an embedded Linux environment.',
+      'Worked on low-level firmware and synchronization drivers for next-generation radio hardware in an embedded Linux environment.',
     highlights: [
-      'Developed and maintained synchronization drivers in Embedded C, improving radio reliability and timing performance.',
-      'Planned and implemented tasks for the first 10 MHz feature on Kryton-based radios, coordinating requirements and verification.',
-      'Created Bash and Python scripts to automate hardware validation and configuration file conversion.',
-      'Used Jenkins, internal test frameworks, Git, and Gerrit in a large Agile/SCRUM team for continuous integration and regression testing.',
-    ],
+      'Developed and maintained low-level sync drivers in Embedded C, improving radio reliability and synchronization performance.',
+      'Planned and implemented tasks for the first 10 MHz feature on Kryton-based radios, coordinating requirements, implementation, and verification with senior engineers.',
+      'Supported launch of new hardware platforms through firmware bring-up, debugging, and regression testing for security, reliability, and performance.',
+      'Created Bash and Python scripts to automate hardware validation and configuration-file conversion, reducing manual effort and increasing test coverage.',
+      'Used Jenkins CI, JSON-based test setups, and internal test frameworks for automated test execution, result monitoring, and troubleshooting.',
+      'Collaborated in a large Agile/SCRUM team using Git and Gerrit for code review, participating in sprint planning, daily stand-ups, and CI workflows.',
+      'Operated in embedded Linux environments, using Bash for running tests, parsing logs, and interacting with firmware and hardware.',
+    ]
   },
   {
     id: 'electrical-tech-installations',
