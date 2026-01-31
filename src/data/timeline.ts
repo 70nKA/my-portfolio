@@ -15,6 +15,17 @@ export const timeline: TimelineEntry[] = [
     tags: ['Hardware', 'PCB Design', 'Altium', 'BMS'],
   },
   {
+    id: '2026-pcb-portfolio',
+    title: 'Launched PCB-Inspired Portfolio',
+    date: '2026',
+    summary:
+      'Designed and built this PCB-inspired portfolio to showcase projects, experience, and education.',
+    description:
+      'Implemented a fully responsive layout, mobile navigation with portals, dark/light theming, and reusable UI primitives. The site itself is a project and a living playground for frontend architecture ideas.',
+    projectSlug: 'pcb-inspired-portfolio',
+    tags: ['Portfolio', 'React', 'Tailwind CSS'],
+  },
+  {
     id: '2023-bachelors-thesis-ethernet',
     title: "Bachelor's Thesis: Bare-Metal Ethernet TX Driver",
     date: '2023',
@@ -28,14 +39,13 @@ export const timeline: TimelineEntry[] = [
   },
   {
     id: '2022-ericsson-start',
-    title: 'Joined Ericsson Nikola Tesla as Embedded Engineer',
+    title: 'Joined Ericsson Nikola Tesla as Embedded Software Engineer',
     date: '2022',
     summary:
-      'Started working on low-level synchronization drivers for new radio hardware platforms.',
+      'Started working on low-level C/C++ firmware and sync drivers for radio hardware.',
     description:
-      'Began industry work on embedded Linux-based radio systems, contributing to synchronization drivers, automated testing, and CI workflows.',
-    experienceSlug: 'radio-sync-drivers',
-    tags: ['Industry', 'Embedded C', 'Radio'],
+      'Joined Ericsson Nikola Tesla in Split as an Embedded Software Engineer, contributing to synchronization drivers, test automation, and bring-up of new radio platforms.',
+    tags: ['Industry', 'Embedded', 'C/C++'],
   },
   {
     id: '2022-fesb-team-racing',

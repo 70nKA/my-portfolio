@@ -27,6 +27,16 @@ and dedicated test firmware for communication buses and sensor interfaces (CAN, 
     heroImageUrl: '/my-portfolio/images/journey/BMS_master.jpg',
   },
   {
+    slug: 'pcb-inspired-portfolio',
+    title: 'PCB-Inspired Portfolio',
+    shortDescription:
+      'This portfolio site themed after schematic and PCB editors, built with React, TypeScript, and Tailwind CSS.',
+    longDescription:
+      'A personal portfolio that combines frontend architecture best practices with a visual language inspired by schematics and PCB layout tools. It features a responsive layout, dark/light theming, smooth section navigation, and reusable UI primitives for cards, headings, and timeline entries.',
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    repoUrl: 'https://github.com/your-username/pcb-inspired-portfolio', // change to your repo
+  },
+  {
     slug: 'ethernet-tx-driver',
     title: "Bachelor's Thesis: Bare-Metal Ethernet TX Driver (PIC32MZ)",
     shortDescription:
