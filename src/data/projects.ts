@@ -34,7 +34,7 @@ and dedicated test firmware for communication buses and sensor interfaces (CAN, 
     longDescription:
       'A personal portfolio that combines frontend architecture best practices with a visual language inspired by schematics and PCB layout tools. It features a responsive layout, dark/light theming, smooth section navigation, and reusable UI primitives for cards, headings, and timeline entries.',
     techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-    repoUrl: 'https://github.com/your-username/pcb-inspired-portfolio', // change to your repo
+    repoUrl: 'https://github.com/70nKA/my-portfolio',
   },
   {
     slug: 'lv-battery-carrier',
