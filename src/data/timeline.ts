@@ -81,7 +81,7 @@ export const timeline: TimelineEntry[] = [
     description:
       'Worked on BMS, relay boards, and low-voltage battery hardware, including PCB design, debugging, and mechanical integration.',
     imageUrl: 'images/journey/FESB_Racing.jpeg',
-    projectSlug: 'bms-master-pcb',
+    experienceSlug: 'bms-master-pcb',
     tags: ['Formula Student', 'Hardware', 'BMS'],
   },
   {
