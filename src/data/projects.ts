@@ -34,7 +34,7 @@ and dedicated test firmware for communication buses and sensor interfaces (CAN, 
     longDescription:
       'A personal portfolio that combines frontend architecture best practices with a visual language inspired by schematics and PCB layout tools. It features a responsive layout, dark/light theming, smooth section navigation, and reusable UI primitives for cards, headings, and timeline entries.',
     techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-    repoUrl: 'https://github.com/your-username/pcb-inspired-portfolio', // change to your repo
+    repoUrl: 'https://github.com/70nKA/my-portfolio',
   },
   {
     slug: 'lv-battery-carrier',
@@ -51,6 +51,40 @@ Coordinated mechanical constraints with electrical requirements (clearances, con
       '/my-portfolio/images/projects/lv-battery-carrier/LV_battery_carrier_battery.png',
       '/my-portfolio/images/projects/lv-battery-carrier/LV_battery_carrier_formula.png',
     ],
+  },
+  {
+    slug: 'fpga-sobel-filter',
+    title: 'FPGA Sobel Filter simulation',
+    shortDescription:
+      'Simulation of a Sobel edge detection filter on an FPGA.',
+    longDescription:
+      'Simulated a Sobel edge detection filter on an FPGA using Verilog. \
+The design processed grayscale image data and generated an output image highlighting edges. \
+The implementation was optimized for performance and memory usage, with careful consideration of timing constraints and resource utilization.',
+    techStack: ['Verilog', 'FPGA', 'Sobel Filter', 'Image Processing'],
+    heroImageUrl: '/my-portfolio/images/journey/fpga_sobel_filter.jpg',
+    images: [
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_319_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_319_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_255_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_255_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_127_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_127_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_63_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_63_bw.jpg",
+
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_319_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_319_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_255_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_255_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_127_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_127_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_63_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_63_wb.jpg",
+  ],
+  
+  liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQCtGOeU2HmJR63o9p6_mnxsAYqST7S623Xx5juxuvWo_ng?e=7uZa3k',
+  repoUrl: 'https://github.com/70nKA/PDS_SIM',
   },
   {
     slug: 'ethernet-tx-driver',

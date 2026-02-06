@@ -38,6 +38,18 @@ export const timeline: TimelineEntry[] = [
     tags: ['Mechanical', 'SolidWorks', 'Formula Student'],
   },
   {
+    id: '2025-fpga-sobel-filter',
+    title: 'FPGA Sobel Filter Simulation',
+    date: '2025',
+    summary:
+      'Simulated a Sobel edge detection filter on an FPGA.',
+    description:
+      'Created a Sobel edge detection filter simulation in Verilog for an FPGA, processing grayscale image data and generating an output image highlighting edges.',
+    imageUrl: '/my-portfolio/images/journey/fpga_sobel_filter.jpg',
+    projectSlug: 'fpga-sobel-filter',
+    tags: ['FPGA', 'Verilog', 'Image Processing', 'Sobel Filter'],
+  },
+  {
     id: '2023-bachelors-thesis-ethernet',
     title: "Bachelor's Thesis: Bare-Metal Ethernet TX Driver",
     date: '2023',
