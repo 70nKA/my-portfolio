@@ -53,6 +53,40 @@ Coordinated mechanical constraints with electrical requirements (clearances, con
     ],
   },
   {
+    slug: 'fpga-sobel-filter',
+    title: 'FPGA Sobel Filter simulation',
+    shortDescription:
+      'Simulation of a Sobel edge detection filter on an FPGA.',
+    longDescription:
+      'Simulated a Sobel edge detection filter on an FPGA using Verilog. \
+The design processed grayscale image data and generated an output image highlighting edges. \
+The implementation was optimized for performance and memory usage, with careful consideration of timing constraints and resource utilization.',
+    techStack: ['Verilog', 'FPGA', 'Sobel Filter', 'Image Processing'],
+    heroImageUrl: '/my-portfolio/images/journey/fpga_sobel_filter.jpg',
+    images: [
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_319_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_319_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_255_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_255_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_127_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_127_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_63_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img5_63_bw.jpg",
+
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_319_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_319_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_255_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_255_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_127_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_127_wb.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_63_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_63_wb.jpg",
+  ],
+  
+  liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQECe6kUu1tHrD8nXoX4q2UBD1KXoX9YJ1p3nY5Z6NQ0Fg?e=U1pQ6F',
+  repoUrl: 'https://github.com/70nKA/fpga-sobel-filter',
+  },
+  {
     slug: 'ethernet-tx-driver',
     title: "Bachelor's Thesis: Bare-Metal Ethernet TX Driver (PIC32MZ)",
     shortDescription:
