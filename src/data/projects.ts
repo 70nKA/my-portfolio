@@ -83,8 +83,8 @@ The implementation was optimized for performance and memory usage, with careful 
       "/my-portfolio/images/projects/fpga-sobel-filter/img6_63_wb.jpg",
   ],
   
-  liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQECe6kUu1tHrD8nXoX4q2UBD1KXoX9YJ1p3nY5Z6NQ0Fg?e=U1pQ6F',
-  repoUrl: 'https://github.com/70nKA/fpga-sobel-filter',
+  liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQCtGOeU2HmJR63o9p6_mnxsAYqST7S623Xx5juxuvWo_ng?e=7uZa3k',
+  repoUrl: 'https://github.com/70nKA/PDS_SIM',
   },
   {
     slug: 'ethernet-tx-driver',
