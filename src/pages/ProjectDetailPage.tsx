@@ -68,28 +68,6 @@ export const ProjectDetailPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Gallery */}
-          {project.images && project.images.length > 0 && (
-            <div>
-              <h3 className="text-sm font-semibold">Screenshots</h3>
-              <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                {project.images.map((src, index) => (
-                  <div
-                    key={src}
-                    className="overflow-hidden rounded-lg border border-schematic-grid/40 bg-schematic-surface/60 dark:border-pcb-dot/40 dark:bg-pcb-surface/60"
-                  >
-                    <img
-                      src={src}
-                      alt={`${project.title} screenshot ${index + 1}`}
-                      className="h-auto w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           <div className="flex flex-wrap gap-3 text-sm">
             {project.liveUrl && (
               <a
@@ -112,6 +90,28 @@ export const ProjectDetailPage: React.FC = () => {
               </a>
             )}
           </div>
+
+          {/* Gallery */}
+          {project.images && project.images.length > 0 && (
+            <div>
+              <h3 className="text-sm font-semibold">Screenshots</h3>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                {project.images.map((src, index) => (
+                  <div
+                    key={src}
+                    className="overflow-hidden rounded-lg border border-schematic-grid/40 bg-schematic-surface/60 dark:border-pcb-dot/40 dark:bg-pcb-surface/60"
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="h-auto w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <Link
             to="/projects"
