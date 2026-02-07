@@ -7,7 +7,6 @@ export const experiences: ExperienceItem[] = [
     role: 'Optical Technician (Field Assistant)',
     org: 'Telecommunications – Optical Access Installations',
     location: 'Croatia',
-    period: 'Jan 2025 – Present',
     description:
       'Assisting with last‑mile optical fiber installations from the distribution point to end‑customer premises.',
     highlights: [
