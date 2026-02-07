@@ -47,7 +47,7 @@ export type ExperienceItem = {
   role: string;
   org: string;
   location?: string;
-  period: string;
+  period?: string;
   description: string;
   highlights?: string[];
 };
