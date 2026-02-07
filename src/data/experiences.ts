@@ -69,6 +69,22 @@ export const experiences: ExperienceItem[] = [
     ],
   },
   {
+    id: 'lab-demonstrator-fesb',
+    slug: 'lab-demonstrator-fesb',
+    role: 'Laboratory Demonstrator (Teaching Assistant)',
+    org: 'FESB – University of Split',
+    location: 'Split, Croatia',
+    period: '2020–2023, 2026 (intermittent)',
+    description:
+      'Assisted professors in laboratory classes, supporting students with exercises, debugging issues, and developing lab materials.',
+    highlights: [
+      'Guided students through lab assignments, explaining concepts and helping them troubleshoot hardware and software problems.',
+      'Co‑taught laboratory sessions alongside professors, reinforcing theoretical content with practical examples.',
+      'Authored and updated lab resource materials and instructions to improve clarity and student understanding.',
+      'Subjects covered: Engineering and Graphic Presentation, Computers and Programming, Digital Electronics.',
+    ],
+  },
+  {
     id: 'conference-support-softcom-splitech',
     slug: 'conference-support-softcom-splitech',
     role: 'Conference Technical Support & Organizer',
