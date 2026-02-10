@@ -1,4 +1,3 @@
-// src/components/layout/Header.tsx
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -45,9 +44,6 @@ interface MobileMenuProps {
   isHome: boolean;
 }
 
-/**
- * Full-screen mobile menu rendered via portal to <body>.
- */
 function MobileMenuOverlay({ isOpen, onClose, isHome }: MobileMenuProps) {
   if (!isOpen) return null;
   const target = document.body;
@@ -59,11 +55,8 @@ function MobileMenuOverlay({ isOpen, onClose, isHome }: MobileMenuProps) {
         'flex flex-col bg-schematic-bg text-schematic-text dark:bg-pcb-bg dark:text-pcb-text',
       )}
     >
-      {/* Top bar with logo + close button */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-schematic-grid/40 dark:border-pcb-dot/40">
-        <span className="font-mono text-sm uppercase tracking-[0.2em]">
-          TONKA
-        </span>
+        <span className="font-mono text-sm uppercase tracking-[0.2em]">TONKA</span>
         <button
           type="button"
           onClick={onClose}
@@ -74,13 +67,11 @@ function MobileMenuOverlay({ isOpen, onClose, isHome }: MobileMenuProps) {
         </button>
       </div>
 
-      {/* Scrollable nav area below the top bar */}
       <div className="flex flex-1 overflow-y-auto px-6">
-        <div
-          className="mx-auto flex min-h-full w-full max-w-xs flex-col
-                     items-center justify-center gap-8 py-12"
-        >
+        <div className="mx-auto flex min-h-full w-full max-w-xs flex-col items-center justify-center gap-8 py-12">
           {navItems.map((item) => {
+            const commonClasses = 'text-lg font-medium transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue';
+
             if (item.type === 'page') {
               return (
                 <NavLink
@@ -88,10 +79,7 @@ function MobileMenuOverlay({ isOpen, onClose, isHome }: MobileMenuProps) {
                   to={item.to}
                   onClick={onClose}
                   className={({ isActive }) =>
-                    cn(
-                      'text-lg font-medium transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue',
-                      isActive && 'text-schematic-accent dark:text-pcb-traceBlue',
-                    )
+                    cn(commonClasses, isActive && 'text-schematic-accent dark:text-pcb-traceBlue')
                   }
                 >
                   {item.label}
@@ -99,32 +87,13 @@ function MobileMenuOverlay({ isOpen, onClose, isHome }: MobileMenuProps) {
               );
             }
 
-            // Section item
-            const commonClasses =
-              'text-lg font-medium transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue';
-
-            if (isHome) {
-              // On home: use normal anchor -> browser scroll to section
-              return (
-                <a
-                  key={item.id}
-                  href={item.hash}
-                  onClick={onClose}
-                  className={commonClasses}
-                >
-                  {item.label}
-                </a>
-              );
-            }
-
-            // On other pages: just go to home top
-            return (
-              <Link
-                key={item.id}
-                to="/"
-                onClick={onClose}
-                className={commonClasses}
-              >
+            // Section Links
+            return isHome ? (
+              <a key={item.id} href={item.hash} onClick={onClose} className={commonClasses}>
+                {item.label}
+              </a>
+            ) : (
+              <Link key={item.id} to={`/${item.hash}`} onClick={onClose} className={commonClasses}>
                 {item.label}
               </Link>
             );
@@ -142,43 +111,25 @@ export function Header() {
   const location = useLocation();
   const isHome = location.pathname === '/';
 
-  // Close mobile menu automatically when switching to desktop width
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    handleResize();
+    const handleResize = () => { if (window.innerWidth >= 768) setIsMenuOpen(false); };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Header shrink on scroll
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
-    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when route changes (e.g., / -> /projects)
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname, location.hash]);
 
-  // Lock scroll when menu is open
   useEffect(() => {
-    const body = document.body;
-    if (isMenuOpen) {
-      body.style.overflow = 'hidden';
-    } else {
-      body.style.overflow = '';
-    }
-    return () => {
-      body.style.overflow = '';
-    };
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
   }, [isMenuOpen]);
 
   return (
@@ -191,31 +142,22 @@ export function Header() {
           isScrolled ? 'py-2 shadow-sm' : 'py-4',
         )}
       >
-        <div
-          className="mx-auto flex w-full items-center justify-between px-4
-                     max-w-4xl md:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl"
-        >
-          <Link
-            to="/"
-            className="font-mono text-sm uppercase tracking-[0.2em] hover:opacity-80 sm:text-base"
-          >
+        <div className="mx-auto flex w-full items-center justify-between px-4 max-w-4xl md:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
+          <Link to="/" className="font-mono text-sm uppercase tracking-[0.2em] hover:opacity-80 sm:text-base">
             TONKA
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden items-center gap-5 text-xs sm:text-sm md:flex">
             {navItems.map((item) => {
+              const commonClasses = 'transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue';
+              
               if (item.type === 'page') {
                 return (
                   <NavLink
                     key={item.id}
                     to={item.to}
                     className={({ isActive }) =>
-                      cn(
-                        'transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue',
-                        isActive &&
-                          'text-schematic-accent dark:text-pcb-traceBlue',
-                      )
+                      cn(commonClasses, isActive && 'text-schematic-accent dark:text-pcb-traceBlue')
                     }
                   >
                     {item.label}
@@ -223,40 +165,25 @@ export function Header() {
                 );
               }
 
-              // Section item
-              const commonClasses =
-                'transition-colors hover:text-schematic-accent dark:hover:text-pcb-traceBlue';
-
-              if (isHome) {
-                return (
-                  <a
-                    key={item.id}
-                    href={item.hash}
-                    className={commonClasses}
-                  >
-                    {item.label}
-                  </a>
-                );
-              }
-
-              return (
-                <Link key={item.id} to="/" className={commonClasses}>
+              return isHome ? (
+                <a key={item.id} href={item.hash} className={commonClasses}>
+                  {item.label}
+                </a>
+              ) : (
+                <Link key={item.id} to={`/${item.hash}`} className={commonClasses}>
                   {item.label}
                 </Link>
               );
             })}
-
             <ThemeToggle />
           </nav>
 
-          {/* Mobile controls */}
           <div className="flex items-center gap-2 md:hidden">
             <ThemeToggle />
             <button
               type="button"
               onClick={() => setIsMenuOpen((prev) => !prev)}
               className="p-2 text-schematic-text dark:text-pcb-text"
-              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -264,12 +191,7 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile menu rendered at <body> level, above everything */}
-      <MobileMenuOverlay
-        isOpen={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
-        isHome={isHome}
-      />
+      <MobileMenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} isHome={isHome} />
     </>
   );
 }
