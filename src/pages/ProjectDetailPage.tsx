@@ -49,7 +49,7 @@ export const ProjectDetailPage: React.FC = () => {
         {/* Main content card */}
         <div className="mt-8 space-y-6 rounded-xl border border-schematic-grid/60 bg-schematic-surface/80 p-6 shadow-sm backdrop-blur dark:border-pcb-dot/60 dark:bg-pcb-surface/80">
           {project.longDescription && (
-            <p className="text-sm text-schematic-muted dark:text-pcb-muted">
+            <p className="text-sm text-schematic-muted dark:text-pcb-muted whitespace-pre-line">
               {project.longDescription}
             </p>
           )}
