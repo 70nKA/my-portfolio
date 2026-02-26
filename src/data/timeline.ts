@@ -4,107 +4,107 @@ import type { TimelineEntry } from '../types/content';
 export const timeline: TimelineEntry[] = [
   {
     id: '2026-master-thesis-bms-master',
-    title: 'Master Thesis: BMS Master PCB for Formula Student EV',
+    title: 'Master Thesis: 480V BMS Master R&D',
     date: '2026',
     summary:
-      'End-to-end design of a Battery Management System (BMS) master PCB for a Formula Student electric race car.',
+      'Engineered a safety-critical BMS Master PCB for a Formula Student EV power-train.',
     description:
-      'Completed the design and validation of a custom BMS master PCB in Altium, handling power paths, safety circuitry, and data collection from distributed slave boards.',
+      'Managed the full cycle from simulation to 2-layer HW implementation. Solved thermal throttling issues using IR imaging and optimized power budgets for stable firmware testing.',
     imageUrl: 'images/journey/BMS_master.jpg',
     projectSlug: 'bms-master-pcb',
-    tags: ['Hardware', 'PCB Design', 'Altium', 'BMS', 'Formula Student'],
+    tags: ['Hardware', 'BMS', 'Thermal Analysis', 'Power Budgeting'],
   },
   {
     id: '2026-pcb-portfolio',
     title: 'Launched PCB-Inspired Portfolio',
     date: '2026',
     summary:
-      'Designed and built this PCB-inspired portfolio to showcase projects, experience, and education.',
+      'Built a React/TypeScript portfolio site modeled after professional ECAD software.',
     description:
-      'Implemented a fully responsive layout, mobile navigation with portals, dark/light theming, and reusable UI primitives. The site itself is a project and a living playground for frontend architecture ideas.',
+      'A personal technical playground showcasing hardware projects through a frontend architecture that mimics a PCB editor interface.',
     projectSlug: 'pcb-inspired-portfolio',
-    tags: ['Portfolio', 'React', 'Tailwind CSS'],
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'UI/UX'],
   },
   {
     id: '2025-lv-battery-carrier',
-    title: 'LV Battery Carrier & Enclosure (Formula Student)',
+    title: 'LV Battery Carrier (Formula Student)',
     date: '2025',
     summary:
-      'Designed the low-voltage battery carrier and enclosure in SolidWorks.',
+      'Mechanical engineering of low voltage battery carrier.',
     description:
-      'Created a robust mechanical carrier and enclosure for the Formula Student EV low-voltage battery pack, ensuring secure mounting, serviceability, and safe cable routing.',
+      'Designed a SolidWorks enclosure ensuring mechanical stability and electrical clearance for the LV battery.',
     imageUrl: '/my-portfolio/images/journey/LV_battery_carrier_single.png',
     projectSlug: 'lv-battery-carrier',
-    tags: ['Mechanical', 'SolidWorks', 'Formula Student'],
+    tags: ['SolidWorks', 'Mechanical Design', 'Vibration Mitigation'],
   },
   {
     id: '2025-fpga-sobel-filter',
-    title: 'FPGA Sobel Filter Simulation',
+    title: 'FPGA Sobel Filter Implementation',
     date: '2025',
     summary:
-      'Simulated a Sobel edge detection filter on an FPGA.',
+      'Hardware-accelerated edge detection using Verilog.',
     description:
-      'Created a Sobel edge detection filter simulation in Verilog for an FPGA, processing grayscale image data and generating an output image highlighting edges.',
+      'Implemented a 3x3 convolution kernel on an FPGA for real-time image processing, focusing on timing closure and resource utilization.',
     imageUrl: '/my-portfolio/images/journey/fpga_sobel_filter.jpg',
     projectSlug: 'fpga-sobel-filter',
-    tags: ['FPGA', 'Verilog', 'Image Processing', 'Sobel Filter'],
+    tags: ['Verilog', 'FPGA', 'Image Processing', 'RTL'],
   },
   {
     id: '2023-bachelors-thesis-ethernet',
-    title: "Bachelor's Thesis: Bare-Metal Ethernet TX Driver",
+    title: "Bachelor's Thesis: Bare-Metal Ethernet Driver",
     date: '2023',
     summary:
-      'Implemented an Ethernet transmit driver on a PIC32MZ using bare-metal C, DMA, and RMII.',
+      'Developed a PIC32MZ Ethernet TX driver with manual physical-layer validation.',
     description:
-      'Designed and coded a low-level Ethernet TX driver, working directly with PIC32MZ registers, DMA engines, and interrupts to achieve reliable frame transmission.',
+      'Solved complex Cache Coherency bugs and performed manual Manchester decoding via oscilloscope to validate a custom bare-metal Ethernet TX driver.',
     imageUrl: 'images/journey/Ethernet_TX.png',
     projectSlug: 'ethernet-tx-driver',
-    tags: ['Embedded', 'C', 'Ethernet', 'DMA'],
+    tags: ['Embedded C', 'DMA', 'Cache Coherency', 'Oscilloscope'],
   },
   {
     id: '2022-ericsson-start',
-    title: 'Joined Ericsson Nikola Tesla as Embedded Software Engineer',
+    title: 'Ericsson: Embedded Software Engineer',
     date: '2022',
     summary:
-      'Started working on low-level C/C++ firmware and sync drivers for radio hardware.',
+      'Pioneered 10MHz synchronization features for next-gen radio platforms.',
     description:
-      'Joined Ericsson Nikola Tesla in Split as an Embedded Software Engineer, contributing to synchronization drivers, test automation, and bring-up of new radio platforms.',
+      'Successfully identified ASIC clock-divider limitations and led the R&D for the first-ever 10MHz sync implementation on Kryton-based radio hardware.',
     experienceSlug: 'embedded-ericsson',
-    tags: ['Industry', 'Embedded', 'C/C++'],
+    tags: ['Industry R&D', 'Clock Sync', 'ASIC', 'Jenkins/Gerrit'],
   },
   {
     id: '2022-fesb-team-racing',
-    title: 'Joined FESB Team Racing (Formula Student)',
+    title: 'FESB Team Racing: Hardware Design Engineer',
     date: '2022',
     summary:
-      'Became hardware design engineer for the electric Formula Student race car.',
+      'Designed power distribution and shutdown circuitry for an electric race car.',
     description:
-      'Worked on BMS, relay boards, and low-voltage battery hardware, including PCB design, debugging, and mechanical integration.',
+      'Responsible for BMS hardware, relay drivers, and pre-charge and discharge circuity component selection and acquisition.',
     imageUrl: 'images/journey/FESB_Racing.jpeg',
-    experienceSlug: 'bms-master-pcb',
-    tags: ['Formula Student', 'Hardware', 'BMS'],
+    experienceSlug: 'hardware-fesb-team-racing',
+    tags: ['BMS', 'Relays', 'Analog Stability', 'Formula Student'],
   },
   {
     id: '2021-DAC',
-    title: 'Binary Weighted Resistor DAC design implementation',
+    title: 'Dual-Rail Resistor DAC',
     date: '2021',
     summary:
-      'Designed and built a binary weighted resistor DAC with an op-amp invert.',
+      'Designed a binary-weighted DAC with ±12V rails for AC signal generation.',
     description:
-      'The design included positive and negative power supplies to support diffrent types of analog output signals.',
+      'Analyzed non-linearity and step-size errors using oscilloscope-based validation of resistor ladder tolerances.',
     projectSlug: 'DAC-breadboard',
-    tags: ['Hardware', 'Analog Design', 'Op-Amps', 'DAC'],
+    tags: ['Analog Design', 'Op-Amps', 'Signal Conditioning'],
   },
   {
     id: '2018-smart-lighting',
-    title: 'Smart Lighting System & Interface PCB',
+    title: 'Smart Apartment: 230V Installation & Control',
     date: '2018',
     summary:
-      'Designed a smart lighting system with a custom PCB and 230 V installation.',
+      'Full-scale 1-bedroom apartment electrical model with Bluetooth remote control.',
     description:
-      'Combined household wiring with a low-voltage control PCB using relays and optocouplers, laying the foundation for later hardware design work.',
+      'Engineered a complete electrical installation (sockets, fuses, FID) on a hand-drawn architectural board. Integrated a custom LV-HV bridge and Arduino-based Bluetooth control to manage lighting via a mobile app.',
     imageUrl: 'images/journey/installation.png',
     projectSlug: 'smart-lighting-system',
-    tags: ['Early Project', 'Electrical Installation', 'PCB'],
-  },
+    tags: ['System Integration', '230V AC', 'Arduino', 'Bluetooth', 'PCB Design'],
+},
 ];

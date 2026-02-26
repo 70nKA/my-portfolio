@@ -6,22 +6,23 @@ export const projects: Project[] = [
     slug: 'bms-master-pcb',
     title: 'Master Thesis: BMS Master PCB for Formula Student EV',
     shortDescription:
-      'End-to-end design of a Battery Management System (BMS) master PCB for a Formula Student electric race car.',
+      'Full-cycle R&D of a 480V-isolated BMS Master Controller, designed for FSG safety compliance and high-reliability operation.',
     longDescription:
-      'Designed, laid out, and validated a custom BMS master PCB responsible for monitoring cell voltages and temperatures, \
-managing pre-charge and discharge paths, and ensuring safe operation of a Formula Student electric race car battery pack. \
-Work included schematic capture and PCB layout in Altium Designer, component selection, board bring-up, hardware debugging, \
-and dedicated test firmware for communication buses and sensor interfaces (CAN, SPI, ADCs, GPIOs).',
+      'Developed a custom BMS master controller under strict size and budget constraints (2-layer design).\n\n' +
+      'Key Technical Challenges:\n' +
+      '• High Voltage Sensing: Implemented a 480V HV-to-LV sensing circuit using isolated voltage dividers and a MAX isolated ADC, ensuring 95% pre-charge verification between the battery pack and inverter as per FSG regulations.\n' +
+      '• Signal Integrity: Managed mixed-signal routing on a 2-layer board, using datasheet-driven trace geometry for isoSPI and optimizing return current paths to minimize noise coupling near power switching areas.\n' +
+      '• Safety & Compliance: Designed according to IPC-2221 standards for creepage and clearance distances to ensure galvanic isolation.\n' +
+      '• HW Debugging & Thermal Optimization: Diagnosed a recurring MCU reset issue using thermal imaging (IR camera) and power dissipation calculations. Mitigated LDO thermal throttling by optimizing the power budget—specifically underclocking the MCU and re-calculating LED current consumption—to ensure stable firmware testing.',
     techStack: [
       'Altium Designer',
+      'High Voltage (480V DC)',
+      'Galvanic Isolation',
+      'IPC-2221 Compliance',
+      'Thermal Analysis',
+      'Hardware Debugging',
+      'CAN / isoSPI',
       'STM32',
-      'CAN',
-      'SPI',
-      'High-Voltage Design',
-      'Board Bring-up',
-      'Testing & Validation',
-      'Firmware',
-      'Documentation',
     ],
     liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQBY0IsdodtlRr0t0xaUYEvDAZuQSea7t0g4Y6L2IG_hV8s?e=TgnmyK',
     heroImageUrl: '/my-portfolio/images/journey/BMS_master.jpg',
@@ -32,7 +33,11 @@ and dedicated test firmware for communication buses and sensor interfaces (CAN, 
     shortDescription:
       'This portfolio site themed after schematic and PCB editors, built with React, TypeScript, and Tailwind CSS.',
     longDescription:
-      'A personal portfolio that combines frontend architecture best practices with a visual language inspired by schematics and PCB layout tools. It features a responsive layout, dark/light theming, smooth section navigation, and reusable UI primitives for cards, headings, and timeline entries.',
+      'A personal portfolio that combines frontend architecture best practices with a visual language inspired by schematics and PCB layout tools.\n\n' +
+      'Key Features:\n' +
+      '• Responsive Architecture: Built with a mobile-first approach using React and Tailwind CSS.\n' +
+      '• Theming: Features a custom dark/light mode system designed to mimic professional ECAD environments.\n' +
+      '• Reusable UI: Developed a library of custom primitives for timeline entries, project cards, and technical breadcrumbs.',
     techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
     repoUrl: 'https://github.com/70nKA/my-portfolio',
   },
@@ -42,10 +47,12 @@ and dedicated test firmware for communication buses and sensor interfaces (CAN, 
     shortDescription:
       'Mechanical design of the low-voltage battery carrier and enclosure for a Formula Student EV.',
     longDescription:
-      'Designed the mechanical carrier and enclosure for the low-voltage battery pack of a Formula Student electric race car using SolidWorks. \
-Focused on robust mounting, ease of service, proper ventilation, and safe routing of power and signal cables. \
-Coordinated mechanical constraints with electrical requirements (clearances, connector access, and protection of wiring and terminals).',
-    techStack: ['SolidWorks', 'Mechanical Design', 'Battery Packaging', 'Formula Student'],
+      'Designed the mechanical carrier and enclosure for the low-voltage battery pack of a Formula Student electric race car using SolidWorks.\n\n' +
+      'Technical Highlights:\n' +
+      '• Mechanical Robustness: Engineered a high-retention housing system to withstand extreme vibration and G-loads in a racing environment.\n' +
+      '• Packaging Constraints: Optimized internal volume for tight cable routing while maintaining electrical clearances and airflow.\n' +
+      '• Serviceability: Integrated quick-access mounting points to allow for rapid battery swaps and maintenance during competition.',
+    techStack: ['SolidWorks', 'Mechanical Design', 'Battery Packaging', 'Vibration Mitigation'],
     heroImageUrl: '/my-portfolio/images/journey/LV_battery_carrier_single.png',
     images: [
       '/my-portfolio/images/projects/lv-battery-carrier/LV_battery_carrier_battery.png',
@@ -58,10 +65,12 @@ Coordinated mechanical constraints with electrical requirements (clearances, con
     shortDescription:
       'Simulation of a Sobel edge detection filter on an FPGA.',
     longDescription:
-      'Simulated a Sobel edge detection filter on an FPGA using Verilog. \
-The design processed grayscale image data and generated an output image highlighting edges. \
-The implementation was optimized for performance and memory usage, with careful consideration of timing constraints and resource utilization.',
-    techStack: ['Verilog', 'FPGA', 'Sobel Filter', 'Image Processing'],
+      'Simulated a Sobel edge detection filter on an FPGA using Verilog.\n\n' +
+      'Technical Challenges:\n' +
+      '• Algorithm Optimization: Implemented a 3x3 convolution kernel for grayscale image processing optimized for hardware logic.\n' +
+      '• Resource Management: Balanced memory usage and logical gates to maintain high-speed processing within FPGA constraints.\n' +
+      '• Timing Analysis: Performed rigorous simulation to ensure zero timing violations and deterministic output across varied image data.',
+    techStack: ['Verilog', 'FPGA', 'Sobel Filter', 'Image Processing', 'Timing Analysis'],
     heroImageUrl: '/my-portfolio/images/journey/fpga_sobel_filter.jpg',
     images: [
       "/my-portfolio/images/projects/fpga-sobel-filter/img5_319_bw.jpg",
@@ -72,77 +81,67 @@ The implementation was optimized for performance and memory usage, with careful 
       "/my-portfolio/images/projects/fpga-sobel-filter/img5_127_wb.jpg",
       "/my-portfolio/images/projects/fpga-sobel-filter/img5_63_wb.jpg",
       "/my-portfolio/images/projects/fpga-sobel-filter/img5_63_bw.jpg",
-
       "/my-portfolio/images/projects/fpga-sobel-filter/img6_319_bw.jpg",
       "/my-portfolio/images/projects/fpga-sobel-filter/img6_319_wb.jpg",
       "/my-portfolio/images/projects/fpga-sobel-filter/img6_255_bw.jpg",
       "/my-portfolio/images/projects/fpga-sobel-filter/img6_255_wb.jpg",
       "/my-portfolio/images/projects/fpga-sobel-filter/img6_127_bw.jpg",
       "/my-portfolio/images/projects/fpga-sobel-filter/img6_127_wb.jpg",
-      "/my-portfolio/images/projects/fpga-sobel-filter/img6_63_bw.jpg",
-      "/my-portfolio/images/projects/fpga-sobel-filter/img6_63_wb.jpg",
-  ],
-  
-  liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQCtGOeU2HmJR63o9p6_mnxsAYqST7S623Xx5juxuvWo_ng?e=7uZa3k',
-  repoUrl: 'https://github.com/70nKA/PDS_SIM',
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_319_bw.jpg",
+      "/my-portfolio/images/projects/fpga-sobel-filter/img6_319_wb.jpg",
+    ],
+    liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQCtGOeU2HmJR63o9p6_mnxsAYqST7S623Xx5juxuvWo_ng?e=7uZa3k',
+    repoUrl: 'https://github.com/70nKA/PDS_SIM',
   },
   {
     slug: 'ethernet-tx-driver',
     title: "Bachelor's Thesis: Bare-Metal Ethernet TX Driver (PIC32MZ)",
     shortDescription:
-      'Bare-metal Ethernet transmit driver on a PIC32MZ microcontroller with DMA and RMII.',
+      'Low-level driver development from scratch, involving DMA, Cache Coherency, and physical Manchester signal validation.',
     longDescription:
-      'Implemented a low-level Ethernet TX driver in C for a PIC32MZ microcontroller. \
-Configured RMII, DMA channels, interrupt handling, and buffer management to reliably transmit Ethernet frames. \
-Focused on register-level control, cache coherency, and deterministic behavior without an RTOS.',
-    techStack: ['C', 'PIC32MZ', 'Ethernet', 'RMII', 'DMA', 'Interrupts', 'Bare-Metal Firmware'],
+      'Engineered a bare-metal Ethernet transmit driver for the PIC32MZ platform by following manufacturer manuals and register maps.\n\n' +
+      'Key Contributions:\n' +
+      '• Memory Management: Solved Cache Coherency challenges by implementing manual cache invalidation for specific RAM addresses, ensuring data synchronization between CPU and DMA.\n' +
+      '• Physical Layer Validation: Due to a lack of a logic analyzer, I performed manual Manchester decoding by analyzing oscilloscope screenshots of the Ethernet cable signal to validate bit transitions and frame headers.\n' +
+      '• Protocol Implementation: Hardcoded PHY values and descriptor-based memory allocation to isolate and resolve low-level timing bugs under tight deadlines.',
+    techStack: ['C', 'PIC32MZ', 'DMA', 'Cache Coherency', 'Manchester Decoding', 'Oscilloscope', 'Bare-Metal Firmware'],
     liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQBC1cRWtR-0RKNg8CGofrLNARAHe0fUzWtY6EApwBuT410?e=AHSRFM',
     repoUrl: 'https://github.com/70nKA/zavrsni_v3_1',
-  },
+},
   {
     slug: 'smart-lighting-system',
-    title: 'Smart Lighting System & Interface PCB',
+    title: 'Smart Apartment Electrical Installation & Control',
     shortDescription:
-      'High-school project combining 230 V household wiring with a custom low-voltage control PCB.',
+      'A full-scale electrical model of a 1-bedroom apartment featuring manual wiring and Bluetooth-based lighting control.',
     longDescription:
-      'Designed and built a complete smart lighting system, including 230 V residential wiring and a custom interface PCB. \
-The board safely connected a low-voltage Arduino control circuit to mains-powered lighting using isolation, optocouplers, and relays. \
-Also handled installation of cabling, sockets, switches, and fixtures according to safety practices.',
-    techStack: ['Analog Design', 'Relays', 'Optocouplers', 'Arduino', '230 V Wiring', 'Electrical Installation'],
+      'This project involved the end-to-end design and execution of a residential electrical system integrated with custom smart-home logic.\n\n' +
+      'Key Technical Challenges:\n' +
+      '• System Architecture: Designed and implemented a full 230V AC installation, including sockets, buttons, fuse boxes, and FID safety switches, mounted on a hand-drawn "birds-eye" architectural layout of a 1-bedroom apartment.\n' +
+      '• LV-HV Interfacing: Engineered a custom PCB bridge to safely isolate 5V Arduino logic from 230V mains power using relays and optocouplers.\n' +
+      '• Wireless Control: Developed firmware and a mobile interface to allow remote lighting control via Bluetooth, bridging traditional electrical infrastructure with modern IoT.\n' +
+      '• Troubleshooting & Safety: Solved early trace-width failures on the control board by augmenting high-current paths with 1.5mm² copper bus-wiring to meet current density requirements.',
+    techStack: ['230V AC Installation', 'System Integration', 'Arduino', 'PCB Design', 'Galvanic Isolation', 'Bluetooth/IoT'],
     liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQAeQaGC83AGRYfPa7l1lhycAXGwefWUwIx1c6PNGwxInoA?e=zjbF05',
     repoUrl: 'https://github.com/70nKA/maturalni_rad',
-    images: ['/my-portfolio/images/projects/smart-lighting-system/scheme_lights.png', 
-      '/my-portfolio/images/projects/smart-lighting-system/scheme_sockets.png', 
-      '/my-portfolio/images/projects/smart-lighting-system/fuse_box.png',
+    images: [
       '/my-portfolio/images/projects/smart-lighting-system/build.png',
       '/my-portfolio/images/projects/smart-lighting-system/installation.png',
-      '/my-portfolio/images/projects/smart-lighting-system/lv_2_hw_pcb.jpg'],
-  },
+      '/my-portfolio/images/projects/smart-lighting-system/fuse_box.png',
+      '/my-portfolio/images/projects/smart-lighting-system/lv_2_hw_pcb.jpg'
+    ],
+},
   {
     slug: 'DAC-breadboard',
-    title: 'Binary Weighted Resistor DAC design implementation',
+    title: 'Binary Weighted Resistor DAC & Analog Signal Chain',
     shortDescription:
-      'Simple design and implementation of a binary weighted resistor DAC.',
+      'Implementation and validation of a resistor-ladder DAC with dual-rail Op-Amp buffering.',
     longDescription:
-      'Binary weighted resistor DAC with 12V positive and negative power rails to support different types of analog output signals. \
-The DAC has an inverting oputput so for testing purposes another op-amp stage is used to obtain non-inverted voltage lowered output signal so that the ouput can be connected to Arduino analog input. \
-Arduino is used to provide digital input signals (binary values for a ramp signal) and read back the analog output voltage on Aroudino IDE monitor which in this case was used as an osilloscope for validation. \
-Later on I aquired an oscilloscope to properly validate the design and its performance which can be seen in the provided demo.',
-    techStack: ['Hardware', 'Analog Design', 'Op-Amps', 'DAC', 'Prototyping', 'Testing'],
+      'Built a binary-weighted resistor DAC to explore digital-to-analog conversion principles and signal conditioning.\n\n' +
+      'Technical Features:\n' +
+      '• Dual-Rail Supply: Utilized ±12V rails to achieve full-scale bipolar analog output swing for AC signal generation.\n' +
+      '• Signal Conditioning: Designed an inverting Op-Amp output stage with gain-scaling for safe MCU interfacing.\n' +
+      '• Validation: Used an oscilloscope to identify and analyze differential non-linearity (DNL) errors caused by resistor tolerance mismatches.',
+    techStack: ['Analog Design', 'Op-Amp Circuits', 'Dual-Rail Supplies', 'Signal Conditioning', 'Oscilloscope Validation', 'Error Analysis'],
     liveUrl: 'https://fesb-my.sharepoint.com/:v:/g/personal/agrbav02_fesb_hr/IQCPj2EJMRttS5rTK2t3YpUHAVer01OdeCdE_zX-7M_8Hyw?e=6EAYQ4',
   },
-//   {
-//     slug: 'radio-sync-drivers',
-//     title: 'Radio Synchronization Drivers (Ericsson Nikola Tesla)',
-//     shortDescription:
-//       'Low-level synchronization drivers for next-generation radio hardware.',
-//     longDescription:
-//       'Contributed to the development and maintenance of synchronization drivers in Embedded C for new radio platforms. \
-// Worked on configuration flows, timing behavior, and regression testing in embedded Linux environments. \
-// Used automated test frameworks, scripting, and CI (Jenkins, Gerrit, Git) to ensure reliability and performance. \
-// Code is proprietary, so only an overview is provided here.',
-//     techStack: ['Embedded C', 'Embedded Linux', 'Radio Hardware', 'Synchronization', 'Python', 'Bash', 'Jenkins', 'Git', 'Gerrit'],
-//     liveUrl: '#',
-//     repoUrl: '#', // proprietary
-//   },
 ];
